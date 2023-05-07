@@ -1,0 +1,201 @@
+/* *********** */
+/* common css*/
+/* *********** */
+
+*{
+/* consider padding within width */
+box-sizing: border-box;
+
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #A389CC;
+}
+a:hover{
+    opacity: 0.9;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+.common-button{
+    background: #ffd8db;
+    border-radius: 20px;
+    padding: 14px 21px;
+}
+
+
+.common-button.dark{
+    /* any element having both common classes, then no space between selector */
+    background: #5243c0;
+    color: #fffFFF;
+}
+
+.container{
+    max-width: 1000px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* *********** */
+/* header css */
+/* *********** */
+
+header{
+    background: #f2f2f2;
+    padding: 10px 0;
+}
+
+header img{
+    width: 100px;
+}
+
+header ul li{
+    display: inline-block;
+}
+
+header ul li a{
+    color: grey;
+    margin: 0 15px;
+    padding-bottom: 5px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    border-bottom: 4px solid #8071D0;
+    color: #8071D0;
+}
+header ul li a.active{
+    color: black;
+}
+
+/* *********** */
+/* main css*/
+/* *********** */
+
+main .container{
+    flex-direction: row-reverse;
+}
+main .content,
+main .banner {
+    padding: 30px;
+}
+
+main .content{
+    width: 400px;
+}
+
+main .content div{
+    display: flex;
+    margin: 20px 0 30px;
+}
+
+main .content div a{
+    margin-right: 20px;
+}
+
+main .content div button{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 20px;
+    background-image: url('img/arrow-up.png');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+main .content div button:last-child{
+    background-image: url('img/arrow-down.png');
+    border: 2px solid lightgray;
+}
+
+main .content ul li {
+    background: #fafafa;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 330px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px;
+    transition: all .2s;
+}
+
+main .content ul li:hover,
+main .content ul li.active {
+    background: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+main .content ul li:last-child{
+    margin-bottom: 0px;
+}
+
+main .content ul li .blue{
+    display: none;
+}
+
+main .content ul li:hover .blue,
+main .content ul li.active .blue{
+    display: block;
+}
+
+main .content ul li:hover .gray,
+main .content ul li.active .gray{
+    display: none;
+}
+
+main .content ul li .title{
+    width: 130px;
+}
+
+main .content ul li .date{
+    color: #c6c5c3;
+}
+
+main .content ul li .tag{
+    width: 23px;
+    height: 14px;
+    border-radius: 10px;
+    background: red;
+    display: inline-block;
+}
+
+main .content ul li .tag.lightred{
+    background: #fed7da;
+}
+main .content ul li .tag.red{
+    background: #FD6534;
+}
+main .content ul li .tag.green{
+    background: #9ED095;
+}
+main .content ul li .tag.lightorange{
+    background: #FFE4A0;
+}
+
+main .banner{
+    text-align: center;
+}
+
+main .banner img{
+    width: 70%;
+}
